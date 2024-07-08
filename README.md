@@ -22,7 +22,7 @@ dayjs().workDays(date, options);
 传入日期或dayjs对象。
 将计算到日期的工作日例如：dayjs("2024/01/01").workDays("2024/01/31", options)就会计算2024/01/01到2024/01/31的工作日。
 
-#### 参数 options
+### 参数 options
 需要传入一个对象
 
 | 属性名                 | 类型    | 默认值   | 必填 | 描述                                                                             |  
@@ -42,9 +42,9 @@ dayjs().workDays(date, options);
 | --------------- | ------- | -------------------------------------------------- |  
 | returns.restDays        | Date[]  | 休息日，即范围内所有周末和假日的日期               |  
 | returns.workDays        | Date[]  | 工作日，即范围内所有普通工作日和调休工作日         |  
-| returns.weekendDays     | Date[]  | 周末，即范围内所有周末日期，会被包含在restDays内   |  
-| returns.vacationDays    | Date[]  | 范围内所有假日日期，会被包含在restDays内           |  
-| returns.adjustWorkDays  | Date[]  | 范围内所有的调休工作日，会被包含在workDays内       |
+| returns.weekendDays     | Date[]  | 周末，即范围内所有周末日期，会被包含在returns.restDays内   |  
+| returns.vacationDays    | Date[]  | 范围内所有假日日期，会被包含在returns.restDays内           |  
+| returns.adjustWorkDays  | Date[]  | 范围内所有的调休工作日，会被包含在returns.workDays内       |
 
 
 <!-- 
