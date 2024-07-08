@@ -1,4 +1,4 @@
-module.exports.dateRange = function* (startDate, endDate) {
+module.exports=function* (startDate, endDate) {
   //日期范围迭代器函数
   const dayDiff = endDate.diff(startDate, "day");
   const direction = dayDiff >= 0 ? 1 : -1;

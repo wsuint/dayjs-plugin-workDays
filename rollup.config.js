@@ -1,5 +1,4 @@
 const commonjs = require("rollup-plugin-commonjs");
-const resolve = require("rollup-plugin-node-resolve");
 module.exports = {
   input: "src/workDays.js",
   output: [
@@ -20,11 +19,6 @@ module.exports = {
     },
   ],
   plugins: [
-    resolve({
-      jsnext: true,
-      main: true,
-      browser: true,
-    }),
     commonjs(),
   ],
 };
