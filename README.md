@@ -18,6 +18,7 @@ dayjs().workDays(date, options);
 ## 参数
 
 #### 参数date
+类型 Date
 传入日期或dayjs对象。
 将计算到日期的工作日例如：dayjs("2024/01/01").workDays("2024/01/31", options)就会计算2024/01/01到2024/01/31的工作日。
 
@@ -28,25 +29,9 @@ dayjs().workDays(date, options);
 | ---------------------- | ------- | -------- | ---- | -------------------------------------------------------------------------------- |  
 | options.vacationDates  | Date[]  | []       | 否   | 假期日期，即除了周末外的节假日日期                                             |  
 | options.weekendDays    | Int[]   | [0,6]    | 否   | 周末天，默认值[0,6]也就是周六和周日，可自定义休息日，如只有周日（啊？）则传入[0]，周三、周六、周日（不会吧不会吧？）休息则传入[0,2,6] |  
-| options.adjustWorkDates | Date[]  | []       | 否   | 调休工作日，传入一个周末日期，这个日期将不会被识别为假期，而是加入工作日；如果与options.vacationDates日期冲突，则优先级较高 |
+| options.adjustWorkDates | Date[]  | []       | 否   |万恶调休！，传入一个周末日期，这个日期将不会被识别为假期，而是加入工作日；如果与options.vacationDates日期冲突，则优先级较高 |
 
- <!-- options.vacationDates
- 类型：Date[] 
- 默认值：[]
- 必填:否
- 描述：假期日期，即除了周末外的节假日日期
- 
- options.weekendDays
- 类型：Int[]
- 默认值：[0,6]
- 必填:否
- 描述：周末天，默认值[0,6]也就是周六和周日，如果您一周休息更少的时间（），例如只有周日则传入[0],如果您一周休息更多时间（羡慕），例如周三则传入[0,2,6]这就表示，一周中 周三，周六，周日被识别为周末。
 
- options.adjustWorkDdates
- 类型：Date[] 
- 默认值：[]
- 必填:否
- 描述：万恶的调休！，不用在多讲什么了把，传入一个周末日期，这个日期将不会被识别为假期，而是加入工作日,如果options.vacationDates和 options.adjustWorkDdates中出现了相同的日期，则options.adjustWorkDdates优先级较高 -->
 
        
 
