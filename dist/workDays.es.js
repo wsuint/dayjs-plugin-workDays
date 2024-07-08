@@ -1,10 +1,8 @@
-'use strict';
-
-const dateRange = function* (startDate, endDate) {
+var dateRange = function* (startDate, endDate) {
   //日期范围迭代器函数
   const dayDiff = endDate.diff(startDate, "day");
   const direction = dayDiff >= 0 ? 1 : -1;
-  let current=null;
+  let current = null;
   for (
     let count = 0;
     direction >= 0 ? count <= dayDiff : count >= dayDiff;
@@ -15,8 +13,12 @@ const dateRange = function* (startDate, endDate) {
   }
 };
 
+var util = {
+	dateRange: dateRange
+};
+
 const format=(date)=>date.format("YYYY-MM-DD");
-var workDays = (option, dayjsClass, dayjs) => {
+var workDays=(option, dayjsClass, dayjs) => {
  dayjsClass.prototype.workDays = function (end = dayjs(), option={}) {
     //返回工作日期
     option = Object.assign(
@@ -44,7 +46,7 @@ var workDays = (option, dayjsClass, dayjs) => {
     const vacationDays = [];
     const adjustWorkDays = [];
 
-    for (let date of dateRange(startDate, endDate)) {
+    for (let date of util(startDate, endDate)) {
       const formatDate = format(date);
       const day = date.day();
       if (__adjustWorkDdates.includes(formatDate)) {
@@ -70,4 +72,4 @@ var workDays = (option, dayjsClass, dayjs) => {
   };
 };
 
-module.exports = workDays;
+export { workDays as default };
