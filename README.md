@@ -44,6 +44,18 @@ dayjs().workDays(date, options);
 ## 返回值
 将会一个对象 returns
 
+| 属性名          | 类型    | 描述                                               |  
+| --------------- | ------- | -------------------------------------------------- |  
+| returns.restDays        | Date[]  | 休息日，即范围内所有周末和假日的日期               |  
+| returns.workDays        | Date[]  | 工作日，即范围内所有普通工作日和调休工作日         |  
+| returns.weekendDays     | Date[]  | 周末，即范围内所有周末日期，会被包含在restDays内   |  
+| returns.vacationDays    | Date[]  | 范围内所有假日日期，会被包含在restDays内           |  
+| returns.adjustWorkDays  | Date[]  | 范围内所有的调休工作日，会被包含在workDays内       |
+
+
+<!-- 
+
+
 returns.restDays
 类型：Date[] 
 描述：休息日，即范围内所有周末和假日的日期
@@ -53,7 +65,7 @@ returns.workDays
 描述：工作日，即范围内所有普通工作日和调休工作日
 
 
-returns.restDays
+returns.weekendDays
 类型：Date[]
 描述：周末，即范围内所有周末日期，会被包含在returns.restDays内
 
@@ -64,7 +76,7 @@ returns.vacationDays
 
 returns.adjustWorkDays
 类型：Date[]
-描述：范围内所有的调休工作日，会被包含在returns.workDays
+描述：范围内所有的调休工作日，会被包含在returns.workDays -->
 
 
 
