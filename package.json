@@ -1,6 +1,6 @@
 {
   "name": "dayjs-plugin-workdays",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "一个基于day.js的工作日插件",
   "main": "./dist/workDays.cjs.js",
   "module": "./dist/workDays.es.js",
