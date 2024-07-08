@@ -1,7 +1,7 @@
 import { dateRange } from "./util.js";
 const format=(date)=>date.format("YYYY-MM-DD")
 export default (option, dayjsClass, dayjs) => {
- dayjsClass.prototype.workDays = function (end = dayjs(), option) {
+ dayjsClass.prototype.workDays = function (end = dayjs(), option={}) {
     //返回工作日期
     option = Object.assign(
       {

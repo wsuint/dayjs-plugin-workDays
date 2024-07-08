@@ -1,13 +1,13 @@
 export default [
   {
-    input: "src/index.js",
+    input: "src/workDays.js",
     output: {
       file: "dist/index.esm.js",
-      format: "es",
+      format: "esm",
     },
   },
   {
-    input: "src/index.js",
+    input: "src/workDays.js",
     output: {
       file: "dist/index.cjs.js",
       format: "cjs",

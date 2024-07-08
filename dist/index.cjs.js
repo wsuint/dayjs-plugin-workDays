@@ -16,8 +16,8 @@ const dateRange = function* (startDate, endDate) {
 };
 
 const format=(date)=>date.format("YYYY-MM-DD");
-var index = (option, dayjsClass, dayjs) => {
- dayjsClass.prototype.workDays = function (end = dayjs(), option) {
+var workDays = (option, dayjsClass, dayjs) => {
+ dayjsClass.prototype.workDays = function (end = dayjs(), option={}) {
     //返回工作日期
     option = Object.assign(
       {
@@ -70,4 +70,4 @@ var index = (option, dayjsClass, dayjs) => {
   };
 };
 
-module.exports = index;
+module.exports = workDays;
