@@ -5,22 +5,24 @@ Due to my limited English proficiency, I used machine translated English documen
 
 
 A weekday plugin based of day.js
-###install
+
+### install
 ```console
 npm install  dayjs-plugin-workdays --save
 ```
-##Usage method
+## Usage method
 ```js
 import workDays from "dayjs-plugin-workdays";
 dayjs.extend(workDays);
 dayjs().workDays(date, options);
 ```
-##Parameters
-####Parameter date
+## Parameters
+#### Parameter date
 Type Date
 Pass in a date or dayjs object.
 Calculate the working days up to the date, for example: dayjs ("2024/01/01"). WorkDays ("2024/01/31", options) will calculate the working days from 2024/01/01 to 2024/01/31.
-###Parameter options
+
+### Parameter options
 Need to pass in an object
 |Attribute Name | Type | Default Value | Required | Description|
 | ---------------------- | ------- | -------- | ---- | -------------------------------------------------------------------------------- |  
@@ -38,8 +40,8 @@ Will return an object
 |All holiday dates within the range of returns.vacationDays | Date [] | will be included in returns.restDays|
 |All compensatory work days within the range of returns.adjustWorkDays | Date [] | will be included in returns.workDays|
 
-
-###Example usage
+ 
+### Example usage
 ```js
 import dayjs from "dayjs";
 import workDays from "dayjs-plugin-workdays";
