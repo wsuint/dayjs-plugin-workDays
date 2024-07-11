@@ -1,3 +1,5 @@
+简体中文 | [English](./README_en.md) |
+
 # dayjs-plugin-workDays
 
 一个基于 day.js 的工作日插件
@@ -21,6 +23,7 @@ dayjs().workDays(date, options);
 类型 Date
 传入日期或dayjs对象。
 将计算到日期的工作日例如：dayjs("2024/01/01").workDays("2024/01/31", options)就会计算2024/01/01到2024/01/31的工作日。
+
 
 ### 参数 options
 需要传入一个对象
