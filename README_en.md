@@ -37,13 +37,9 @@ Need to pass in an object
 
 
 | Attribute Name  |   Type    |  DefaultValue   | Required |  describe                                                                            |  
-
 | ---------------------- | ------- | -------- | ---- | -------------------------------------------------------------------------------- |  
-
 | options.vacationDates  | Date[]  | []       | false   | Period date, which refers to holiday dates other than weekends                                             |  
-
 | options.weekendDays    | Int[]   | [0,6]    | false   | The default value is [0,6], which means Saturday and Sunday. If the day of the week is off, the code for the day of the week will be passed in. If there is only Sunday, [0] will be passed in. If there is an additional day off on Wednesday, [0,2,6] will be passed in |  
-
 | options.adjustWorkDates | Date[]  | []       | false   |Damn sick leave! Pass in a weekend date, which will not be recognized as a holiday but will be added as a working day; If there is a conflict with the options.xacationDates date, the priority is higher |
 
 
@@ -56,16 +52,9 @@ Will return an object
 | Attribute Name            |   Type  | describe                                            |  
 | --------------- | ------- | -------------------------------------------------- |  
 | returns.restDays        | Date[]  | Rest days refer to the dates of all weekends and holidays within the scope               |  
-
-
 | returns.workDays        | Date[]  |   Workdays, including all regular workdays and compensatory workdays within the scope       |  
-
-
 | returns.weekendDays     | Date[]  | Weekends, which refer to all weekend dates within the scope, will be included in returns.restDays   |  
-
-
 | returns.vacationDays    | Date[]  |   All holiday dates within the scope will be included in returns.restDays           |  
-
 | returns.adjustWorkDays  | Date[]  | All compensatory working days within the scope will be included in returns.workDays      |
 
 
