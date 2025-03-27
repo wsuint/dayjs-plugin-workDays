@@ -1,25 +1,22 @@
-declare module "dayjs-plugin-workdays" {
-  import dayjs from "dayjs";
-  
-  declare const workDays: (option?: dayjs.PluginFunc) => dayjs.PluginFunc;
-  export = workDays;
-}
-
 declare module "dayjs" {
+  interface WorkDaysOptions {
+    vacationDates?: string[];
+    weekendDays?: number[];
+    adjustWorkDates?: string[];
+  }
+
+  interface WorkDaysResult {
+    restDays: string[];
+    workDays: string[];
+    weekendDays: string[];
+    vacationDays: string[];
+    adjustWorkDays: string[];
+  }
+
   interface Dayjs {
-    workDays(
-      end?: dayjs.Dayjs,
-      option?: {
-        vacationDates?: string[];
-        weekendDays?: number[];
-        adjustWorkDdates?: string[];
-      }
-    ): {
-      restDays: string[];
-      workDays: string[];
-      weekendDays: string[];
-      vacationDays: string[];
-      adjustWorkDays: string[];
-    };
+    workDays(end?: dayjs.ConfigType, options?: WorkDaysOptions): WorkDaysResult;
   }
 }
+
+declare const workDays: dayjs.PluginFunc<WorkDaysOptions, WorkDaysResult>;
+export = workDays;
