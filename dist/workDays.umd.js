@@ -20,7 +20,8 @@
   };
 
   const format=(date)=>date.format("YYYY-MM-DD");
-  var workDays = (option, dayjsClass, dayjs) => {
+
+  var workDays=(option, dayjsClass, dayjs) => {
    dayjsClass.prototype.workDays = function (end = dayjs(), option={}) {
       //返回工作日期
       option = Object.assign(

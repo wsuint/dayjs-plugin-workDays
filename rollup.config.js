@@ -1,4 +1,6 @@
 const commonjs = require("rollup-plugin-commonjs");
+const copy = require("rollup-plugin-copy");
+
 module.exports = {
   input: "src/workDays.js",
   output: [
@@ -20,5 +22,10 @@ module.exports = {
   ],
   plugins: [
     commonjs(),
+    copy({
+      targets: [
+        { src: "src/workDays.d.ts", dest: "dist" }
+      ]
+    })
   ],
 };
